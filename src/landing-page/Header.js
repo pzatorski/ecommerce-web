@@ -22,7 +22,7 @@ class Header extends React.Component {
             </TextContainer>
             <Button
               text="SHOP NOW"
-              onClick={() => this.props.history.push('/about')}
+              onClick={() => this.props.history.push('/products')}
             />
           </HeaderText>
         </HeaderImage>
@@ -36,11 +36,11 @@ const TextContainer = styled.div`
 `;
 
 const HeaderText = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 `;
 
 const HeaderImage = styled.div`

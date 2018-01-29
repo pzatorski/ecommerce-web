@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { withRouter } from 'react-router';
 
 import Text from './Text';
 
@@ -18,4 +17,4 @@ const ButtonContainer = styled.button`
   cursor: pointer;
 `;
 
-export default withRouter(Button);
+export default Button;
