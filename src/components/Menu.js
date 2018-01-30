@@ -6,14 +6,18 @@ import MainContent from './MainContent';
 import Logo from './Logo';
 import IconSearch from './IconSearch';
 import StyledLink from './StyledLink';
-import MainMargin from './MainMargin';
 import CategoryTab from './CategoryTab';
+
+import Laptop from '../assets/images/ben-kolde-403278.jpg';
+import Phone from '../assets/images/rahul-chakraborty-460018.jpg';
+import Tablet from '../assets/images/dose-media-337489.jpg';
+import TV from '../assets/images/julian-o-hayon-265569.jpg';
 
 class Menu extends React.Component {
   constructor() {
     super();
     this.state = {
-      isOpen: true
+      isOpen: false
     };
   }
 
@@ -75,15 +79,24 @@ class Menu extends React.Component {
             </ShopPanelContainer>
           </ShopPanel>
           {this.state.isOpen && (
-            <MainMargin>
-              <CategoryTab />
-            </MainMargin>
+            <Categories>
+              <CategoryTab text="Laptops" imageUrl={Laptop} />
+              <CategoryTab text="Phones" imageUrl={Phone} />
+              <CategoryTab text="Tablets" imageUrl={Tablet} />
+              <CategoryTab text="TV's" imageUrl={TV} />
+            </Categories>
           )}
         </MainContent>
       </div>
     );
   }
 }
+
+const Categories = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const MenuSlide = styled.a`
   cursor: pointer;
