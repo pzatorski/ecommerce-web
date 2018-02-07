@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import LandingPage from './landing-page';
 import Products from './products';
@@ -11,7 +11,7 @@ import Basket from './basket';
 class App extends Component {
   render() {
     return (
-      <HashRouter>
+      <Router>
         <div>
           <Route exact path={'/'} component={LandingPage} />
           <Route exact path={'/products'} component={Products} />
@@ -20,7 +20,7 @@ class App extends Component {
           <Route exact path={'/join-us'} component={JoinUs} />
           <Route exact path={'/my-cart'} component={Basket} />
         </div>
-      </HashRouter>
+      </Router>
     );
   }
 }
