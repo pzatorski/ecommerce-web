@@ -1,10 +1,13 @@
 import React from 'react';
 
 import Text from '../components/Text';
+import Menu from '../components/Menu';
+import Header from './Header';
 
 const About = () => (
   <div>
-    <Text>About</Text>
+    <Menu />
+    <Header />
   </div>
 );
 

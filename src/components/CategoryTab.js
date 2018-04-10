@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import Text from './Text';
 
 const CategoryTab = ({ text, imageUrl, link }) => (
   <div style={{ display: 'flex' }}>
-    <Category href={link}>
+    <Category to={link || ''}>
       <CategoryImage imageUrl={imageUrl} />
       <TextContainer>
         <Text size="xxs">{text}</Text>
@@ -14,7 +15,8 @@ const CategoryTab = ({ text, imageUrl, link }) => (
   </div>
 );
 
-const Category = styled.a`
+const Category = styled(Link)`
+  text-decoration: none;
   position: relative;
   margin: 1rem 1rem 3rem 1rem;
 `;

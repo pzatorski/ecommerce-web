@@ -30,11 +30,11 @@ const Text = styled.p`
       case 's':
         return '2.7rem';
       case 'xs':
-        return '2rem';
+        return '2.3rem';
       case 'xxs':
         return '1.5rem';
       default:
-        return 'normal';
+        return '1.5rem';
     }
   }};
 
